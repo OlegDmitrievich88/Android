@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="button">Ok</string>
+    <string name="textpogoda">weather forecast</string>
+    <string name="editText">enter city</string>
+    <string name="textView3">Moscow</string>
+    <string name="editTextDate">enter date</string>
+    <string name="radioButton5">summer</string>
+    <string name="radioButton6">winter</string>
+    <string name="textView4">+30</string>
+    <string name="textViewData">data</string>
 </resources>
