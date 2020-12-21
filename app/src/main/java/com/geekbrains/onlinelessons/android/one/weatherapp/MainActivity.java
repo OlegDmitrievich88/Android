@@ -1,6 +1,7 @@
 package com.geekbrains.onlinelessons.android.one.weatherapp;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -21,7 +22,9 @@ public class MainActivity extends AppCompatActivity {
     private Button buttonTwo;
     private EditText day;
     private TextView data;
-
+    private RadioButton radioButton4;
+    private RadioButton radioButton5;
+//RecyclerView rv = (RecyclerView)findViewById(R.id.rv);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,7 +34,17 @@ public class MainActivity extends AppCompatActivity {
         setRadioButton();
         setCity();
         setData();
+ //       setLanguages();
     }
+
+//    private void setLanguages() {
+//        radioButton4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
+//    }
 
     private void setData() {
         buttonTwo.setOnClickListener(new View.OnClickListener() {
@@ -78,5 +91,7 @@ public class MainActivity extends AppCompatActivity {
         buttonTwo = findViewById(R.id.button2);
         day = findViewById(R.id.editTextDate);
         data = findViewById(R.id.textViewData);
+        radioButton4 = findViewById(R.id.radioButton77);
+        radioButton5 = findViewById(R.id.radioButton78);
     }
 }
