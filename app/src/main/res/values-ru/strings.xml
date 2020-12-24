@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Погодное приложение</string>
+    <string name="button">Ok</string>
+    <string name="textWeather">прогноз погоды</string>
+    <string name="editText">введите город</string>
+    <string name="textView3">Москва</string>
+    <string name="editTextDate">введите дату</string>
+    <string name="radioButton5">лето</string>
+    <string name="radioButton6">зима</string>
+    <string name="textView4">+30</string>
+    <string name="textViewData">дата</string>
+    <string name="pressure">кПа</string>
+    <string name="wind">Ветер</string>
+    <string name="wet">Влажность</string>
+    <string name="settingText">Настройки</string>
+    <string name="temp">temp</string>
+    <string name="select">выберите:</string>
+    <string name="theme">Темы</string>
+    <string name="accept">принять</string>
+</resources>
