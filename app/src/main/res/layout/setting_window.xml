@@ -37,6 +37,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <TextView
+        android:id="@+id/nameCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/textView3"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="@+id/settingCity"
+        app:layout_constraintStart_toStartOf="@+id/settingCity"
+        app:layout_constraintTop_toBottomOf="@+id/settingCity" />
+
     <CheckBox
         android:id="@+id/pressure1"
         android:layout_width="wrap_content"

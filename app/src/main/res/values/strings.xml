@@ -12,7 +12,7 @@
     <string name="pressure">kPa</string>
     <string name="wind">wind</string>
     <string name="wet">wet</string>
-    <string name="settingText">Setting</string>
+    <string name="settingText">Setting for:</string>
     <string name="temp">temp</string>
     <string name="select">select:</string>
     <string name="theme">Theme</string>
