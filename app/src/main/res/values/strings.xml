@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="button">Ok</string>
+    <string name="textWeather">Weather forecast</string>
+    <string name="editText">enter city</string>
+    <string name="textView3">Moscow</string>
+    <string name="editTextDate">enter date</string>
+    <string name="radioButton5">summer</string>
+    <string name="radioButton6">winter</string>
+    <string name="textView4">+30</string>
+    <string name="textViewData">data</string>
+    <string name="pressure">kPa</string>
+    <string name="wind">wind</string>
+    <string name="wet">wet</string>
+    <string name="settingText">Setting for:</string>
+    <string name="temp">temp</string>
+    <string name="select">select:</string>
+    <string name="theme">Theme</string>
+    <string name="accept">accept</string>
+    <string name="setting">Setting</string>
+    <string-array name="city">
+        <item>Moscow</item>
+        <item>Novgorod</item>
+        <item>St.Peterburg</item>
+        <item>Pskov</item>
+        <item>Tver</item>
+    </string-array>
 </resources>
