@@ -16,6 +16,13 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".ScreenCity"
+            android:label="Second">
+
+        </activity>
+        <activity android:name=".SettingForCity" />
+
     </application>
 
 </manifest>
