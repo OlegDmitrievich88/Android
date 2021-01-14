@@ -56,18 +56,9 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void set() {
-        Container container = (Container) getIntent().getExtras().getSerializable("settingKey");
-        temp.setText(container.temp);
-        kPa.setText(container.kPa);
-        wind.setText(container.wind);
-        wet.setText(container.wet);
-        city.setText(container.city);
-    }
 
-    public void setImageView() {
-        imageView.setImageDrawable(getDrawable(R.drawable.winter));
-    }
+
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
