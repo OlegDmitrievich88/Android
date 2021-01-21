@@ -20,10 +20,21 @@
     <string name="setting">Setting</string>
     <string name="AcceptAllSetting">AcceptAllSetting</string>
     <string name="google">google</string>
+    <string name="city">city</string>
+    <string name="city_name">city name</string>
     <string-array name="city">
         <item>Moscow</item>
         <item>Veliky-novgorod</item>
         <item>Pskov</item>
         <item>Tver</item>
+        <item>Kazan</item>
     </string-array>
+
+    <integer-array name="weather">
+        <item>@drawable/sun</item>
+        <item>@drawable/r</item>
+        <item>@drawable/w</item>
+        <item>@drawable/w</item>
+        <item>@drawable/w</item>
+    </integer-array>
 </resources>

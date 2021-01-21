@@ -18,6 +18,7 @@ import static com.geekbrains.onlinelessons.android.one.weatherapp.SettingForCity
 public class MainActivity extends AppCompatActivity {
       private Button button;
       private Button buttonGoogle;
+      private Button setting;
       private static final String tag = "activity";
       private ImageView imageView;
       private TextView temp;
@@ -25,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
       private TextView wind;
       private TextView wet;
       private TextView city;
+      static String cityKey = "City";
       private static final int requestCodeSet = 1234;
+      private static final int requestCodeSet2 = 12345;
 
 
 
@@ -37,11 +40,24 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "hello man",Toast.LENGTH_SHORT).show();
         Log.d(tag,"Create");
         initViews();
-        //set();
         ButtonGoogle();
         Button();
-        //setImageView();
+        buttonSetting();
 
+
+    }
+
+    private void buttonSetting() {
+        setting.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String cityName = city.getText().toString();
+                Intent intent = new Intent(MainActivity.this, SettingForCity.class);
+                intent.putExtra(cityKey,cityName);
+                startActivityForResult(intent,requestCodeSet2);
+
+            }
+        });
     }
 
     private void ButtonGoogle() {
@@ -54,27 +70,28 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(googleIntent);
             }
         });
-    }
-
-
-
-
+    }// по нажатию вызывает страницу с инфой о погоде в выбранном городе
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         Toast.makeText(this, "SETTING",Toast.LENGTH_SHORT).show();
-        if (requestCode == requestCodeSet && resultCode == RESULT_OK) {
+        if (requestCode == requestCodeSet2 && resultCode == RESULT_OK) {
 
-            city.setText(data.getStringExtra(ScreenCity.settingKey));
-            temp.setText(data.getStringExtra(ScreenCity.settingKey1));
-            kPa.setText(data.getStringExtra(ScreenCity.settingKey2));
-            wind.setText(data.getStringExtra(ScreenCity.settingKey3));
-            wet.setText(data.getStringExtra(ScreenCity.settingKey4));
+           // city.setText(data.getStringExtra(SettingForCity.settingKey));
+            temp.setText(data.getStringExtra(SettingForCity.settingKey1));
+            kPa.setText(data.getStringExtra(SettingForCity.settingKey2));
+            wind.setText(data.getStringExtra(SettingForCity.settingKey3));
+            wet.setText(data.getStringExtra(SettingForCity.settingKey4));
 
+        }
+        if (requestCode == requestCodeSet && resultCode == RESULT_OK){
+            city.setText(data.getStringExtra(ScreenCity.keyForCity));
         }
 
     }
+
+
 
 
 
@@ -97,6 +114,7 @@ public class MainActivity extends AppCompatActivity {
           wet = findViewById(R.id.wet);
           city = findViewById(R.id.textView3);
           buttonGoogle = findViewById(R.id.buttonGoogle);
+          setting = findViewById(R.id.setting);
 
     }//инициализирует
 

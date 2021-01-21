@@ -20,4 +20,6 @@
     <string name="accept">принять</string>
     <string name="AcceptAllSetting">AcceptAllSetting</string>
     <string name="google">google</string>
+    <string name="city">city</string>
+    <string name="city_name">city name</string>
 </resources>

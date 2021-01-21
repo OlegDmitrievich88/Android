@@ -50,8 +50,6 @@ public class SettingForCity extends AppCompatActivity {
         checkBoxListener();
         acceptSetting();
 
-
-
     }
 
 
@@ -70,7 +68,7 @@ public class SettingForCity extends AppCompatActivity {
                 finish();
             }
         });
-    }
+    }//принимает настройки и отправляет из в первую активити
 
     private void checkBoxListener() {
        checkBox1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -115,7 +113,7 @@ public class SettingForCity extends AppCompatActivity {
 
             }
         });
-    }
+    } //слушатель чекбоксов
 
     private void initViews() {
           radioButton3 = findViewById(R.id.radioButton3);
@@ -136,7 +134,7 @@ public class SettingForCity extends AppCompatActivity {
         outState.getBoolean(String.valueOf(checkBox3),isChecked3);
         outState.getBoolean(String.valueOf(checkBox4),isChecked4);
         super.onSaveInstanceState(outState);
-    }
+    }//сохроняет состояние чекбоксов
 
     @Override
     protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
@@ -145,6 +143,6 @@ public class SettingForCity extends AppCompatActivity {
         checkBox2.setChecked(savedInstanceState.getBoolean(String.valueOf(checkBox2),isChecked2));
         checkBox3.setChecked(savedInstanceState.getBoolean(String.valueOf(checkBox3),isChecked3));
         checkBox4.setChecked(savedInstanceState.getBoolean(String.valueOf(checkBox4),isChecked4));
-    }
+    }//восстанавливает состояние чекбоксов
 }
 

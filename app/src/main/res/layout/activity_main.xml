@@ -41,6 +41,7 @@
         android:layout_marginTop="30dp"
         android:text="@string/textView3"
         android:textSize="40sp"
+        android:layout_marginLeft="30dp"
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textWeather" />
 
@@ -49,12 +50,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
+        android:layout_marginLeft="30dp"
         android:text="@string/textView4"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="@+id/textViewData"
-        app:layout_constraintStart_toStartOf="@+id/textViewData"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textViewData" />
-
 
 
     <TextView
@@ -64,8 +65,9 @@
         android:layout_marginTop="16dp"
         android:text="@string/textViewData"
         android:textSize="30sp"
+        android:layout_marginLeft="30dp"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
-        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
    <TextView
@@ -103,7 +105,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:background="@color/colorBlue"
-        android:text="@string/setting"
+        android:text="@string/city"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
@@ -115,10 +117,24 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:text="@string/google"
+        android:background="@color/colorBlue"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/wet"
         app:layout_constraintVertical_bias="0.963" />
+
+    <Button
+        android:id="@+id/setting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="24dp"
+        android:background="@color/colorBlue"
+        android:text="@string/setting"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintStart_toEndOf="@+id/button1"
+        app:layout_constraintTop_toTopOf="@+id/button1"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
