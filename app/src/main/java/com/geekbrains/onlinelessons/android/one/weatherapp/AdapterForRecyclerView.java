@@ -50,4 +50,5 @@ public class AdapterForRecyclerView extends RecyclerView.Adapter<AdapterForRecyc
 
                 }
         }
+
 }

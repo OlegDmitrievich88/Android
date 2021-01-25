@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
       private RecyclerView recyclerView;
       public ArrayList<String> listForecast;
       private String[] list;
-    //  public ArrayList<String> listForecast = new ArrayList<>(Arrays.asList("Monday +25","Tuesday +27","Wednesday -100","Thursday +75","Friday +- 50","Saturday +16","Sunday +90"));
+
 
 
 
@@ -71,8 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         LinearLayoutManager manager = new LinearLayoutManager(getBaseContext());
         AdapterForRecyclerView adapter = new AdapterForRecyclerView(listForecast);
-//        recyclerView.setLayoutManager(manager);
-//        recyclerView.setAdapter(adapter);
+
         DividerItemDecoration decoration = new DividerItemDecoration(getBaseContext(),LinearLayoutManager.VERTICAL);
         decoration.setDrawable(Objects.requireNonNull(ContextCompat.getDrawable(getBaseContext(),R.drawable.iconsun)));
         recyclerView.addItemDecoration(decoration);
@@ -111,7 +110,7 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(this, "SETTING",Toast.LENGTH_SHORT).show();
         if (requestCode == requestCodeSet2 && resultCode == RESULT_OK) {
 
-           // city.setText(data.getStringExtra(SettingForCity.settingKey));
+
             temp.setText(data.getStringExtra(SettingForCity.settingKey1));
             kPa.setText(data.getStringExtra(SettingForCity.settingKey2));
             wind.setText(data.getStringExtra(SettingForCity.settingKey3));
