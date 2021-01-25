@@ -22,12 +22,23 @@
     <string name="google">google</string>
     <string name="city">city</string>
     <string name="city_name">city name</string>
+    <string name="next_day">next day</string>
     <string-array name="city">
         <item>Moscow</item>
         <item>Veliky-novgorod</item>
         <item>Pskov</item>
         <item>Tver</item>
         <item>Kazan</item>
+    </string-array>
+
+    <string-array name="forecast2345">
+        <item>Monday +25</item>
+        <item>Tuesday +27</item>
+        <item>Wednesday -100</item>
+        <item>Thursday +75</item>
+        <item>Friday +- 50</item>
+        <item>Saturday +16</item>
+        <item>Sunday +90</item>
     </string-array>
 
     <integer-array name="weather">

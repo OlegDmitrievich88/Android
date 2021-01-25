@@ -2,7 +2,12 @@ package com.geekbrains.onlinelessons.android.one.weatherapp;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.recyclerview.widget.DividerItemDecoration;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Bundle;
@@ -12,6 +17,11 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Objects;
 
 import static com.geekbrains.onlinelessons.android.one.weatherapp.SettingForCity.settingKey;
 
@@ -29,6 +39,12 @@ public class MainActivity extends AppCompatActivity {
       static String cityKey = "City";
       private static final int requestCodeSet = 1234;
       private static final int requestCodeSet2 = 12345;
+      private RecyclerView recyclerView;
+      public ArrayList<String> listForecast;
+      private String[] list;
+    //  public ArrayList<String> listForecast = new ArrayList<>(Arrays.asList("Monday +25","Tuesday +27","Wednesday -100","Thursday +75","Friday +- 50","Saturday +16","Sunday +90"));
+
+
 
 
 
@@ -43,8 +59,25 @@ public class MainActivity extends AppCompatActivity {
         ButtonGoogle();
         Button();
         buttonSetting();
+        setRecyclerView();
 
 
+    }
+
+    private void setRecyclerView() {
+
+        list = getResources().getStringArray(R.array.forecast2345);
+        listForecast = new ArrayList<>(Arrays.asList(list));
+
+        LinearLayoutManager manager = new LinearLayoutManager(getBaseContext());
+        AdapterForRecyclerView adapter = new AdapterForRecyclerView(listForecast);
+//        recyclerView.setLayoutManager(manager);
+//        recyclerView.setAdapter(adapter);
+        DividerItemDecoration decoration = new DividerItemDecoration(getBaseContext(),LinearLayoutManager.VERTICAL);
+        decoration.setDrawable(Objects.requireNonNull(ContextCompat.getDrawable(getBaseContext(),R.drawable.iconsun)));
+        recyclerView.addItemDecoration(decoration);
+        recyclerView.setLayoutManager(manager);
+        recyclerView.setAdapter(adapter);
     }
 
     private void buttonSetting() {
@@ -115,6 +148,7 @@ public class MainActivity extends AppCompatActivity {
           city = findViewById(R.id.textView3);
           buttonGoogle = findViewById(R.id.buttonGoogle);
           setting = findViewById(R.id.setting);
+          recyclerView = findViewById(R.id.recycler1Main);
 
     }//инициализирует
 
