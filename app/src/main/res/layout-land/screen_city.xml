@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"  xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/sky">
+
+    <ImageView
+        android:id="@+id/cityImage"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:src="@drawable/city"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/enterCity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:hint="@string/editText"
+        android:inputType="text"
+        android:textSize="35sp"
+        app:layout_constraintEnd_toEndOf="@+id/cityImage"
+        app:layout_constraintHorizontal_bias="0.402"
+        app:layout_constraintStart_toStartOf="@+id/cityImage"
+        app:layout_constraintTop_toTopOf="@+id/cityImage" />
+
+    <Button
+        android:id="@+id/enter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button"
+        android:textSize="20sp"
+        android:background="@color/colorBlue"
+        app:layout_constraintBottom_toBottomOf="@+id/enterCity"
+        app:layout_constraintStart_toEndOf="@+id/enterCity"
+        app:layout_constraintTop_toTopOf="@+id/enterCity"
+        app:layout_constraintVertical_bias="0.692" />
+
+
+    <fragment
+        android:id="@+id/listCity"
+        android:name="com.geekbrains.onlinelessons.android.one.weatherapp.ContainerFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="129dp"
+        android:layout_marginTop="70dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cityImage"
+        app:layout_constraintEnd_toEndOf="@+id/cityImage"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="@+id/cityImage"
+        app:layout_constraintTop_toBottomOf="@+id/enterCity"
+        app:layout_constraintVertical_bias="0.829" />
+
+    <FrameLayout
+        android:id="@+id/fragmentChange"
+        android:layout_width="147dp"
+        android:layout_height="198dp"
+        android:layout_marginEnd="52dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cityImage"
+        app:layout_constraintEnd_toEndOf="@+id/cityImage"
+        app:layout_constraintTop_toTopOf="@+id/cityImage"
+        app:layout_constraintVertical_bias="0.206" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
