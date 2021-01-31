@@ -16,6 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+
+            android:name=".ScreenCity"
+            android:label="Second">
+
+        </activity>
+        <activity android:name=".SettingForCity"
+            android:theme="@style/RedTheme"/>
+
     </application>
 
 </manifest>

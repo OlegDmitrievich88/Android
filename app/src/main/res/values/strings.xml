@@ -1,3 +1,52 @@
 <resources>
     <string name="app_name">WeatherApp</string>
+    <string name="button">Ok</string>
+    <string name="textWeather">Weather forecast</string>
+    <string name="editText">enter city</string>
+    <string name="textView3">Moscow</string>
+    <string name="editTextDate">enter date</string>
+    <string name="radioButton5">summer</string>
+    <string name="radioButton6">winter</string>
+    <string name="textView4">+30</string>
+    <string name="textViewData">data</string>
+    <string name="pressure">kPa</string>
+    <string name="wind">wind</string>
+    <string name="wet">wet</string>
+    <string name="settingText">Setting for:</string>
+    <string name="temp">temp</string>
+    <string name="select">select:</string>
+    <string name="theme">Theme</string>
+    <string name="accept">accept</string>
+    <string name="setting">Setting</string>
+    <string name="AcceptAllSetting">AcceptAllSetting</string>
+    <string name="google">google</string>
+    <string name="city">city</string>
+    <string name="city_name">city name</string>
+    <string name="next_day">next day</string>
+    <string name="input_city">input city</string>
+    <string-array name="city">
+        <item>Moscow</item>
+        <item>Veliky-novgorod</item>
+        <item>Pskov</item>
+        <item>Tver</item>
+        <item>Kazan</item>
+    </string-array>
+
+    <string-array name="forecast2345">
+        <item>Monday +25</item>
+        <item>Tuesday +27</item>
+        <item>Wednesday -100</item>
+        <item>Thursday +75</item>
+        <item>Friday +- 50</item>
+        <item>Saturday +16</item>
+        <item>Sunday +90</item>
+    </string-array>
+
+    <integer-array name="weather">
+        <item>@drawable/sun</item>
+        <item>@drawable/r</item>
+        <item>@drawable/w</item>
+        <item>@drawable/w</item>
+        <item>@drawable/w</item>
+    </integer-array>
 </resources>
