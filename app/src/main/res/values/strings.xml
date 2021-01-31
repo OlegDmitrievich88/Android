@@ -24,6 +24,7 @@
     <string name="city_name">city name</string>
     <string name="next_day">next day</string>
     <string name="input_city">input city</string>
+    <string name="update">update</string>
     <string-array name="city">
         <item>Moscow</item>
         <item>Veliky-novgorod</item>
