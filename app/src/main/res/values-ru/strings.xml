@@ -23,4 +23,5 @@
     <string name="city">city</string>
     <string name="city_name">city name</string>
     <string name="next_day">next day</string>
+    <string name="input_city">input city</string>
 </resources>

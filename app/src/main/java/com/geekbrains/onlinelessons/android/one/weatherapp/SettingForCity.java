@@ -15,6 +15,8 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.material.snackbar.Snackbar;
+
 public class SettingForCity extends AppCompatActivity {
     private RadioButton radioButton3;
     private RadioButton radioButton2;
@@ -57,6 +59,7 @@ public class SettingForCity extends AppCompatActivity {
         accept.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+              //  Snackbar.make(view,"you have chosen",Snackbar.LENGTH_LONG);
                 city = nameCity.getText().toString();
                 Intent intent = new Intent();
                 intent.putExtra(settingKey,city);
@@ -74,10 +77,10 @@ public class SettingForCity extends AppCompatActivity {
        checkBox1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
            @Override
            public void onCheckedChanged(CompoundButton compoundButton, boolean isChecked) {
-               if (checkBox1.isChecked()){
+              if (checkBox1.isChecked()){
                    isChecked1 = true;
                    temp = "25 C";
-
+                   Snackbar.make(compoundButton,"you have selected the temperature",Snackbar.LENGTH_LONG).show();
                }
            }
        });
@@ -87,7 +90,7 @@ public class SettingForCity extends AppCompatActivity {
                 if (checkBox2.isChecked()){
                     isChecked2 = true;
                     kPa = "99.8 kPa";
-
+                    Snackbar.make(compoundButton,"you have selected the pressure",Snackbar.LENGTH_LONG).show();
                 }
             }
         });
@@ -97,7 +100,7 @@ public class SettingForCity extends AppCompatActivity {
                 if (checkBox3.isChecked()){
                     isChecked3 = true;
                     wind = "50 m/s";
-
+                    Snackbar.make(compoundButton,"you have chosen the wind speed",Snackbar.LENGTH_LONG).show();
                 }
             }
         });
@@ -107,7 +110,7 @@ public class SettingForCity extends AppCompatActivity {
               if (checkBox4.isChecked()){
                   isChecked4 = true;
                   wet = "57%";
-
+                  Snackbar.make(compoundButton,"you have chosen humidity",Snackbar.LENGTH_LONG).show();
               }
 
 

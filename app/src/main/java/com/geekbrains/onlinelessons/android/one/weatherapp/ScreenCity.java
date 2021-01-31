@@ -12,12 +12,16 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentTransaction;
 
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.textfield.TextInputEditText;
+
 public class ScreenCity extends AppCompatActivity {
 
-    private EditText editCityName;
-    private Button ok;
+
     private String city;
     static String keyForCity = "city";
+    private TextInputEditText cityMaterial;
+    private MaterialButton buttonOk;
 
 
     @Override
@@ -25,20 +29,21 @@ public class ScreenCity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.screen_city);
         initViews();
-        oK();
+        materialButton();
 
         ContainerFragment fragment = new ContainerFragment();
         FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.add(fragment,null);
 
-
     }
 
-    private void oK() {
-        ok.setOnClickListener(new View.OnClickListener() {
+
+
+    private void materialButton() {
+        buttonOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                city = editCityName.getText().toString();
+                city = cityMaterial.getText().toString();
                 Intent intent = new Intent();
                 intent.putExtra(keyForCity,city);
                 setResult(RESULT_OK, intent);
@@ -47,7 +52,9 @@ public class ScreenCity extends AppCompatActivity {
         });
     }
     private void initViews() {
-        ok = findViewById(R.id.enter);
-        editCityName = findViewById(R.id.enterCity);
+
+
+        cityMaterial = findViewById(R.id.inputLoginCity);
+        buttonOk = findViewById(R.id.accept);
             }//инициализирует
 }

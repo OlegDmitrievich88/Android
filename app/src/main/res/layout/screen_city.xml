@@ -17,44 +17,16 @@
         app:layout_constraintTop_toTopOf="parent"
       />
 
-    <EditText
-        android:id="@+id/enterCity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:hint="@string/editText"
-        android:inputType="text"
-        android:textSize="35sp"
-        app:layout_constraintEnd_toEndOf="@+id/cityImage"
-        app:layout_constraintHorizontal_bias="0.402"
-        app:layout_constraintStart_toStartOf="@+id/cityImage"
-        app:layout_constraintTop_toTopOf="@+id/cityImage" />
-
-    <Button
-        android:id="@+id/enter"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/button"
-        android:textSize="20sp"
-        android:background="@color/colorBlue"
-        app:layout_constraintBottom_toBottomOf="@+id/enterCity"
-        app:layout_constraintStart_toEndOf="@+id/enterCity"
-        app:layout_constraintTop_toTopOf="@+id/enterCity"
-        app:layout_constraintVertical_bias="0.692" />
-
-
     <fragment
         android:id="@+id/listCity"
         android:name="com.geekbrains.onlinelessons.android.one.weatherapp.ContainerFragment"
         android:layout_width="wrap_content"
         android:layout_height="359dp"
-        android:layout_marginTop="276dp"
         app:layout_constraintBottom_toTopOf="@+id/fragmentChange"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="@+id/cityImage"
-        app:layout_constraintTop_toBottomOf="@+id/enterCity"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/inputCity" />
 
     <FrameLayout
         android:id="@+id/fragmentChange"
@@ -64,6 +36,37 @@
         app:layout_constraintEnd_toEndOf="@+id/cityImage"
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="@+id/cityImage" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/inputCity"
+        android:layout_width="226dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="172dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragmentChange"
+        app:layout_constraintStart_toStartOf="@+id/cityImage"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.114">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputLoginCity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/input_city"
+            android:inputType="text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/accept"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:text="@string/accept"
+        app:layout_constraintBottom_toBottomOf="@+id/inputCity"
+        app:layout_constraintEnd_toEndOf="@+id/cityImage"
+        app:layout_constraintStart_toEndOf="@+id/inputCity"
+        app:layout_constraintTop_toTopOf="@+id/inputCity"
+        app:layout_constraintVertical_bias="0.0" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
